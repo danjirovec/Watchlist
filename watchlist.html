@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poetic Robot - Watchlist</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script
+			src="https://code.jquery.com/jquery-3.6.3.min.js"
+			integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+			crossorigin="anonymous">
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+                <a class="active" href="watchlist.html"><h1>Watchlist</h1></a>
+                <a href="index.html"><h3>Search For Movies</h3></a>
+        </div>
+        <div>
+            <h3 id="empty-watchlist">You have no movies in watchlist. Add some!</h3>
+        </div>
+        <div class="watchlist" id="watchlist"></div>
+        <dialog class="modal modal-write-note" id="modal-write-note">
+            <div class="write-note" id="write-note">
+                <div class="write-note-heading"><h2>Add a note (optional):</h2></div>
+                    <form class="dialog-form" method="dialog">
+                        <div class="write-note-form">
+                            <div class="write-note-form-input">
+                                <textarea class="dialog-input" id="dialog-input" cols="30" rows="10" placeholder="You can write a note here. Press ESCAPE to exit this dialog window..."></textarea>
+                            </div>
+                            <div class="write-note-form-btn">
+                                <button class="btn" id="dialog-btn-write-clear" onclick="clearNoteTextarea()" type="button">Reset</button>
+                                <button class="btn dialog-btn-write" id="dialog-btn-write" onclick="addNote()" type="submit">Save</button>
+                            </div>
+                        </div>
+                    </form>
+            </div>
+        </dialog>
+        <dialog class="modal modal-show-note" id="modal-show-note">
+            <div class="show-note" id="show-note"></div>
+                <div class="show-note-heading"><h2>Your note:</h2></div>
+                <div class="show-note-text"><p class="note-text-p" id="note-text-p"></p></div>
+                <div class="show-note-btn"><button class="btn" id="dialog-btn-show" type="button">Close</button></div>
+        </dialog>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
